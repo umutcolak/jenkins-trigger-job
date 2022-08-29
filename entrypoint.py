@@ -23,7 +23,7 @@ JOB_PATH = mandatory_arg(sys.argv[4])
 JOB_PARAMS = sys.argv[5] or '{}'
 
 # create/connect jenkins server
-server = jenkins.Jenkins(f"{JENKINS_URL}", username=JENKINS_USER, password=JENKINS_TOKEN)
+server = jenkins.Jenkins(url=JENKINS_URL, username=JENKINS_USER, password=JENKINS_TOKEN)
 
 # build job
 server.build_job(JOB_PATH, parameters=json.loads(JOB_PARAMS), token=JENKINS_TOKEN)
