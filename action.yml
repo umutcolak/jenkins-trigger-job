@@ -1,5 +1,5 @@
 # action.yml
-name: 'Build Jenkins job'
+name: 'Jenkins trigger job'
 description: 'Trigger jenkins job'
 inputs:
   jenkins-url:
