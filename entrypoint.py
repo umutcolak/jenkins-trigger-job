@@ -27,4 +27,4 @@ JOB_PARAMS = sys.argv[5]
 server = jenkins.Jenkins(url=JENKINS_URL, username=JENKINS_USER, password=JENKINS_TOKEN)
 
 # build job
-server.build_job(JOB_PATH, parameters=JOB_PARAMS, token=JENKINS_TOKEN)
+server.build_job(JOB_PATH, parameters=json.loads(JOB_PARAMS), token=JENKINS_TOKEN)
