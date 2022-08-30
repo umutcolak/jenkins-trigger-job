@@ -23,8 +23,7 @@ JOB_PATH = mandatory_arg(sys.argv[4])
 JOB_PARAMS = sys.argv[5]
 
 # This code specific for our project
-if JOB_PARAMS in "refs/heads/":
-    JOB_PARAMS.replace("refs/heads/","")
+JOB_PARAMS = JOB_PARAMS.replace("refs/heads/", "")
 
 # create/connect jenkins server
 server = jenkins.Jenkins(url=JENKINS_URL, username=JENKINS_USER, password=JENKINS_TOKEN)
