@@ -1,5 +1,5 @@
 # action.yml
-name: 'Jenkins trigger job'
+name: 'Build Jenkins job'
 description: 'Trigger jenkins job'
 inputs:
   jenkins-url:
@@ -11,7 +11,7 @@ inputs:
   user:
     description: "user name"
     required: true
-  job-name:
+  job-path:
     description: '/job/job_name'
     required: true
   job-params:
@@ -27,8 +27,8 @@ runs:
     - ${{ inputs.jenkins-url}}
     - ${{ inputs.jenkins-token}}
     - ${{ inputs.user}}
-    - ${{ inputs.job-name}}
+    - ${{ inputs.job-path }}
     - ${{ inputs.job-params}}
 branding:
-  icon: 'award'
-  color: 'yellow'
+  icon: 'arrow-right-circle'
+  color: 'blue'
