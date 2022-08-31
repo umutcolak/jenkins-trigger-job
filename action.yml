@@ -11,7 +11,7 @@ inputs:
   user:
     description: "user name"
     required: true
-  job-path:
+  job-name:
     description: '/job/job_name'
     required: true
   job-params:
@@ -27,7 +27,7 @@ runs:
     - ${{ inputs.jenkins-url}}
     - ${{ inputs.jenkins-token}}
     - ${{ inputs.user}}
-    - ${{ inputs.job-path }}
+    - ${{ inputs.job-name}}
     - ${{ inputs.job-params}}
 branding:
   icon: 'award'

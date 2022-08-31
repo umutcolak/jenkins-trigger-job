@@ -16,7 +16,7 @@ This action builds/triggers a jenkins job, waiting it to be finished and enablin
 
 **Required** 
 
-### `job-path`
+### `job-name`
 
 **Required**
 
@@ -40,6 +40,6 @@ E.g.
         jenkins-url: ${{ secrets.JENKINS_URL }}
         jenkins-token: ${{ secrets.JENKINS_TOKEN }}
         user: "jenkins-username"
-        job-path: "job/folder_name/job/job_name"
+        job-name: "job/folder_name/job/job_name"
         job-params: "{'param1': 'value1', 'param2': 'value2'}"
 ```
