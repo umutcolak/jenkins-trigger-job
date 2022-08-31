@@ -16,7 +16,7 @@ This action builds/triggers a jenkins job, waiting it to be finished and enablin
 
 **Required** 
 
-### `job-path`
+### `job-name`
 
 **Required**
 

@@ -17,7 +17,7 @@ def mandatory_arg(argv):
 JENKINS_URL = mandatory_arg(sys.argv[1])
 JENKINS_TOKEN = mandatory_arg(sys.argv[2])
 JENKINS_USER = mandatory_arg(sys.argv[3])
-JOB_PATH = mandatory_arg(sys.argv[4])
+JOB_NAME = mandatory_arg(sys.argv[4])
 
 # not mandatory
 JOB_PARAMS = sys.argv[5]
@@ -29,4 +29,4 @@ JOB_PARAMS = JOB_PARAMS.replace("refs/heads/", "")
 server = jenkins.Jenkins(url=JENKINS_URL, username=JENKINS_USER, password=JENKINS_TOKEN)
 
 # build job
-server.build_job(JOB_PATH, parameters=json.loads(JOB_PARAMS), token=JENKINS_TOKEN)
+server.build_job(JOB_NAME, parameters=json.loads(JOB_PARAMS), token=JENKINS_TOKEN)
